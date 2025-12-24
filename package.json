@@ -1,0 +1,33 @@
+{
+    "name": "@bentopdf/gs-wasm",
+    "version": "0.1.0",
+    "description": "Ghostscript compiled to WebAssembly for BentoPDF",
+    "type": "module",
+    "main": "dist/index.js",
+    "module": "dist/index.js",
+    "types": "types/index.d.ts",
+    "exports": {
+        ".": {
+            "import": "./dist/index.js",
+            "types": "./types/index.d.ts"
+        }
+    },
+    "files": [
+        "dist",
+        "types",
+        "assets"
+    ],
+    "scripts": {
+        "build": "esbuild src/index.ts --bundle --format=esm --outfile=dist/index.js --external:./assets/*",
+        "typecheck": "tsc --noEmit"
+    },
+    "author": "BentoPDF",
+    "license": "AGPL-3.0",
+    "dependencies": {
+        "@types/emscripten": "^1.39.10"
+    },
+    "devDependencies": {
+        "esbuild": "^0.21.2",
+        "typescript": "^5.3.3"
+    }
+}
