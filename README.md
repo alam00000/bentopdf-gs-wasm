@@ -36,3 +36,5 @@ npm run build
 This project is licensed under the [AGPL-3.0](LICENSE) license.
 
 Ghostscript is © Artifex Software, Inc. and licensed under AGPL-3.0.
+
+BentoPDF is © BentoPDF and licensed under AGPL-3.0.
